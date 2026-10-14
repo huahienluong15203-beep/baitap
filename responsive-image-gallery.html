@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery hình ảnh responsive</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 32px 20px;
+        color: #252d32;
+        font-family: Arial, sans-serif;
+        background: #f2f5f3;
+      }
+
+      .gallery-page {
+        width: min(1100px, 100%);
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 2rem;
+      }
+
+      .intro {
+        margin: 0 0 24px;
+        color: #52615c;
+        line-height: 1.5;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .gallery-item {
+        min-width: 0;
+        overflow: hidden;
+        background: #fff;
+        border: 1px solid #d7dfda;
+      }
+
+      .gallery-item img {
+        display: block;
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+      }
+
+      .caption {
+        padding: 14px;
+      }
+
+      .caption h2 {
+        margin: 0 0 6px;
+        font-size: 1.1rem;
+      }
+
+      .caption p {
+        margin: 0;
+        color: #52615c;
+        line-height: 1.45;
+      }
+
+      @media (max-width: 700px) {
+        .gallery-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 499px) {
+        body {
+          padding: 24px 14px;
+        }
+
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .gallery-item img {
+          height: 220px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="gallery-page">
+      <h1>Responsive Image Gallery</h1>
+      <p class="intro">
+        Thu nhỏ cửa sổ để xem số cột thay đổi theo kích thước màn hình.
+      </p>
+
+      <div class="gallery-grid">
+        <article class="gallery-item">
+          <img
+            src="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg"
+            alt="Vách đá Trolltunga nhìn ra hồ ở Na Uy"
+            loading="lazy"
+          />
+          <div class="caption">
+            <h2>Trolltunga, Na Uy</h2>
+            <p>Vách đá cao nhìn xuống hồ và thung lũng.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item">
+          <img
+            src="https://demo.codegym.vn/web/15/gallery/img_forest.jpg"
+            alt="Rừng cây xanh dưới ánh nắng"
+            loading="lazy"
+          />
+          <div class="caption">
+            <h2>Khu rừng</h2>
+            <p>Ánh nắng xuyên qua những tán cây xanh.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item">
+          <img
+            src="https://demo.codegym.vn/web/15/gallery/img_lights.jpg"
+            alt="Cực quang rực sáng trên bầu trời đêm"
+            loading="lazy"
+          />
+          <div class="caption">
+            <h2>Cực quang</h2>
+            <p>Dải sáng nhiều màu trên bầu trời đêm.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item">
+          <img
+            src="https://demo.codegym.vn/web/15/gallery/img_mountains.jpg"
+            alt="Dãy núi phủ tuyết giữa mây trời"
+            loading="lazy"
+          />
+          <div class="caption">
+            <h2>Dãy núi</h2>
+            <p>Những đỉnh núi cao phủ tuyết trắng.</p>
+          </div>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
