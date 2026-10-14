@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Chủ Giản Lược</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        min-height: 1500px;
+        padding-top: 70px;
+      }
+
+      .main-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: white;
+        padding: 15px 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .main-header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      .main-header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      .main-header nav ul li {
+        margin-left: 20px;
+      }
+
+      .main-header nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .page-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+        gap: 20px;
+      }
+
+      .sidebar {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        flex-shrink: 0;
+      }
+
+      .left-sidebar {
+        width: 200px;
+      }
+
+      .right-sidebar {
+        width: 200px;
+      }
+
+      .main-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        flex-grow: 1;
+      }
+
+      .sidebar h3 {
+        margin-top: 0;
+        color: #333;
+      }
+
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .sidebar ul li {
+        margin-bottom: 10px;
+        color: #555;
+      }
+
+      .main-content h2 {
+        margin-top: 0;
+      }
+
+      .main-content p {
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <h1>Tiêu đề Trang Web</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Dịch vụ</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="page-container">
+      <aside class="sidebar left-sidebar">
+        <h3>Sidebar Trái</h3>
+        <ul>
+          <li>Mục 1</li>
+          <li>Mục 2</li>
+          <li>Mục 3</li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <h2>Nội dung chính của trang</h2>
+        <p>
+          Đây là khu vực chứa nội dung quan trọng nhất của trang web. Chúng ta sẽ đặt
+          các bài viết, sản phẩm, hoặc thông tin chi tiết tại đây.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet.
+          Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas.
+          Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos,
+          nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod.
+          Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet.
+          Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas.
+          Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos,
+          nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod.
+          Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet.
+          Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas.
+          Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos,
+          nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod.
+          Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet.
+          Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas.
+          Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos,
+          nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod.
+          Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet.
+          Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas.
+          Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos,
+          nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod.
+          Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.
+        </p>
+      </main>
+
+      <aside class="sidebar right-sidebar">
+        <h3>Sidebar Phải</h3>
+        <p>
+          Đây là một sidebar khác, có thể chứa quảng cáo, bài viết liên quan hoặc
+          các widget khác.
+        </p>
+      </aside>
+    </div>
+  </body>
+</html>
