@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout với HTML5</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f3f4f6;
+        color: #1f2937;
+      }
+
+      .container {
+        width: 1200px;
+        margin: 20px auto;
+        background: #fff;
+        border: 1px solid #d1d5db;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      header {
+        background: linear-gradient(135deg, #1f2937, #374151);
+        color: #fff;
+        padding: 24px 30px;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2rem;
+      }
+
+      nav {
+        background: #e5e7eb;
+        border-bottom: 1px solid #d1d5db;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      nav li {
+        padding: 15px 22px;
+        border-right: 1px solid #d1d5db;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #111827;
+        font-weight: 700;
+      }
+
+      .main-area {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      aside {
+        width: 240px;
+        background: #f9fafb;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        padding: 16px;
+      }
+
+      aside h3 {
+        margin-top: 0;
+      }
+
+      aside ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      aside li {
+        padding: 10px 0;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      section {
+        background: #f9fafb;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        padding: 18px;
+      }
+
+      article {
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 16px;
+      }
+
+      article h2,
+      section h2 {
+        margin-top: 0;
+      }
+
+      footer {
+        background: #111827;
+        color: #fff;
+        text-align: center;
+        padding: 18px 14px;
+      }
+
+      @media (max-width: 900px) {
+        .container {
+          width: 95%;
+        }
+
+        .main-area {
+          flex-direction: column;
+        }
+
+        aside {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Website Tin Tức</h1>
+      </header>
+
+      <nav>
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Tin tức</a></li>
+          <li><a href="#">Dịch vụ</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </nav>
+
+      <div class="main-area">
+        <aside>
+          <h3>Danh mục</h3>
+          <ul>
+            <li>Thế giới</li>
+            <li>Kinh doanh</li>
+            <li>Giải trí</li>
+            <li>Thể thao</li>
+            <li>Công nghệ</li>
+          </ul>
+        </aside>
+
+        <div class="content">
+          <section>
+            <h2>Hot News</h2>
+            <p>
+              Đây là phần tin nổi bật nhất của trang, giúp người đọc nắm bắt nhanh
+              thông tin quan trọng trong ngày.
+            </p>
+          </section>
+
+          <article>
+            <h2>Phương pháp mới trong thiết kế web</h2>
+            <p>
+              HTML5 và CSS hiện đại giúp xây dựng giao diện thân thiện, dễ sử dụng và
+              tối ưu trên nhiều thiết bị.
+            </p>
+          </article>
+
+          <article>
+            <h2>Xu hướng phát triển công nghệ năm 2026</h2>
+            <p>
+              Nhiều doanh nghiệp đang tập trung vào AI, responsive design và trải nghiệm
+              người dùng để nâng cao hiệu quả sản phẩm.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <footer>© 2026 Website Tin Tức. Tất cả quyền được bảo lưu.</footer>
+    </div>
+  </body>
+</html>
