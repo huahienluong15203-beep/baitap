@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page Responsive</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #f8fafc;
+        color: #1f2937;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 15px 20px;
+        color: white;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+
+      .nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 100px 20px;
+        background: linear-gradient(135deg, #f4f4f4, #dbeafe);
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        display: inline-block;
+        background: #1d4ed8;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 26px;
+        border-radius: 999px;
+        font-weight: 700;
+      }
+
+      .services,
+      .testimonials {
+        text-align: center;
+        padding: 50px 20px;
+      }
+
+      .services h2,
+      .testimonials h2 {
+        margin-bottom: 25px;
+        font-size: 2rem;
+      }
+
+      .service-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .service {
+        flex: 1;
+        min-width: 250px;
+        background-color: #bae6fd;
+        padding: 25px 20px;
+        border-radius: 12px;
+        font-weight: 700;
+        box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+      }
+
+      .testimonials {
+        background-color: #e5e7eb;
+      }
+
+      .testimonial {
+        max-width: 700px;
+        margin: 15px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+        font-style: italic;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .nav ul {
+          display: none;
+        }
+
+        .hero {
+          padding: 60px 20px;
+        }
+
+        .service-container {
+          flex-direction: column;
+        }
+
+        .service {
+          width: 100%;
+        }
+
+        .services,
+        .testimonials {
+          padding: 40px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">MyBrand</div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Dịch vụ</a></li>
+          <li><a href="#">Đánh giá</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Chào mừng đến với MyBrand</h1>
+      <p>Giải pháp số 1 cho doanh nghiệp của bạn</p>
+      <a href="#services" class="btn">Tìm hiểu thêm</a>
+    </section>
+
+    <section id="services" class="services">
+      <h2>Dịch vụ của chúng tôi</h2>
+      <div class="service-container">
+        <div class="service">Thiết kế web</div>
+        <div class="service">Phát triển phần mềm</div>
+        <div class="service">Marketing số</div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>Khách hàng nói gì?</h2>
+      <div class="testimonial">"Dịch vụ tuyệt vời!" - Khách hàng A</div>
+      <div class="testimonial">
+        "Tôi rất hài lòng với MyBrand." - Khách hàng B
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2024 MyBrand. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
