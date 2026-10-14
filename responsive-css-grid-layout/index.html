@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bố cục responsive bằng CSS Grid</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <header class="header">
+        <a class="brand" href="#main">NORTH / NOTE</a>
+        <p class="header-caption">Tạp chí khám phá và sáng tạo</p>
+      </header>
+
+      <nav class="navigation" aria-label="Điều hướng chính">
+        <a class="nav-link active" href="#main">Trang chủ</a>
+        <a class="nav-link" href="#stories">Chuyên mục</a>
+        <a class="nav-link" href="#sidebar">Góc đọc</a>
+        <a class="nav-link" href="#footer">Liên hệ</a>
+      </nav>
+
+      <main class="main-content" id="main">
+        <p class="eyebrow">BẢN TIN CUỐI TUẦN · SỐ 08</p>
+        <h1>Đi chậm để nhìn thấy nhiều hơn.</h1>
+        <p class="intro">
+          Một bố cục tạp chí nhỏ được chia thành các vùng bằng CSS Grid. Trên
+          màn hình rộng, nội dung chính và thanh bên đứng cạnh nhau.
+        </p>
+
+        <div class="stories" id="stories">
+          <article class="story story-featured">
+            <span class="story-index">01 / HÀNH TRÌNH</span>
+            <h2>Những con đường dẫn về phía biển</h2>
+            <p>
+              Một chuyến đi ngắn, vài khoảng lặng và những điều bất ngờ dọc
+              đường.
+            </p>
+          </article>
+          <article class="story">
+            <span class="story-index">02 / GHI CHÉP</span>
+            <h2>Góc bàn đầy nắng</h2>
+            <p>Không gian giản dị để bắt đầu một ý tưởng mới.</p>
+          </article>
+        </div>
+      </main>
+
+      <aside class="sidebar" id="sidebar">
+        <p class="sidebar-label">ĐỌC THÊM</p>
+        <article class="side-story">
+          <span>05 phút</span>
+          <h2>Một thành phố sau cơn mưa</h2>
+        </article>
+        <article class="side-story">
+          <span>03 phút</span>
+          <h2>Gom lại những điều nhỏ bé</h2>
+        </article>
+        <a class="all-stories" href="#stories"
+          >Xem tất cả bài viết <span aria-hidden="true">→</span></a
+        >
+      </aside>
+
+      <footer class="footer" id="footer">
+        <span>NORTH / NOTE</span>
+        <span>Đọc một chút, đi xa hơn.</span>
+      </footer>
+    </div>
+  </body>
+</html>
