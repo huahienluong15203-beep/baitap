@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành grid-gap</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 30px 20px;
+        color: #202b36;
+        background: #f3f6f4;
+        font-family: Arial, sans-serif;
+      }
+
+      .page {
+        width: min(1000px, 100%);
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 2rem;
+      }
+
+      .intro {
+        margin: 0 0 22px;
+        color: #52615c;
+        line-height: 1.55;
+      }
+
+      .examples {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        align-items: start;
+      }
+
+      .example {
+        min-width: 0;
+        padding: 22px;
+        background: #fff;
+        border: 1px solid #d9e1dd;
+        border-radius: 6px;
+      }
+
+      .example h2 {
+        margin: 0 0 8px;
+        font-size: 1.25rem;
+      }
+
+      .description,
+      .result {
+        color: #52615c;
+        line-height: 1.5;
+      }
+
+      .description {
+        min-height: 3em;
+        margin: 0 0 14px;
+      }
+
+      pre {
+        min-height: 130px;
+        overflow-x: auto;
+        margin: 0 0 16px;
+        padding: 12px 14px;
+        color: #17324d;
+        background: #edf2f4;
+        border-left: 4px solid #176b68;
+        font:
+          0.9rem/1.5 Consolas,
+          monospace;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid-equal {
+        grid-gap: 20px;
+      }
+
+      .grid-different {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 30px 10px;
+      }
+
+      .grid-container > div {
+        min-width: 0;
+        padding: 20px 10px;
+        overflow-wrap: anywhere;
+        text-align: center;
+      }
+
+      .grid-equal > div {
+        background: #b9e3f2;
+      }
+
+      .grid-different > div {
+        background: #cce8ce;
+      }
+
+      .result {
+        margin: 14px 0 0;
+      }
+
+      .modern-note {
+        margin-top: 18px;
+        padding: 14px 16px;
+        color: #40514a;
+        background: #e7eee9;
+        line-height: 1.5;
+      }
+
+      .modern-note p {
+        margin: 0;
+      }
+
+      @media (max-width: 760px) {
+        body {
+          padding: 22px 14px;
+        }
+
+        .examples {
+          grid-template-columns: 1fr;
+        }
+
+        .description,
+        pre {
+          min-height: 0;
+        }
+
+        .example {
+          padding: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <h1>CSS Grid: grid-gap</h1>
+      <p class="intro">
+        <code>grid-gap</code> là shorthand đặt khoảng cách hàng trước, khoảng
+        cách cột sau. Ô màu trong mỗi ví dụ được sắp xếp bằng CSS Grid.
+      </p>
+
+      <div class="examples">
+        <section class="example">
+          <h2>Ví dụ 1: Khoảng cách bằng nhau</h2>
+          <p class="description">
+            Một giá trị <code>20px</code> áp dụng cho cả khoảng cách hàng và
+            cột.
+          </p>
+          <pre><code>.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+/* Tương đương */
+grid-row-gap: 20px;
+grid-column-gap: 20px;</code></pre>
+          <div class="grid-container grid-equal">
+            <div>Ô 1</div>
+            <div>Ô 2</div>
+            <div>Ô 3</div>
+            <div>Ô 4</div>
+          </div>
+          <p class="result">Khoảng cách hàng: 20px. Khoảng cách cột: 20px.</p>
+        </section>
+
+        <section class="example">
+          <h2>Ví dụ 2: Khoảng cách khác nhau</h2>
+          <p class="description">
+            Giá trị thứ nhất <code>30px</code> dành cho hàng; giá trị thứ hai
+            <code>10px</code> dành cho cột.
+          </p>
+          <pre><code>.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px 10px;
+}
+
+/* Tương đương */
+grid-row-gap: 30px;
+grid-column-gap: 10px;</code></pre>
+          <div class="grid-container grid-different">
+            <div>Ô 1</div>
+            <div>Ô 2</div>
+            <div>Ô 3</div>
+            <div>Ô 4</div>
+            <div>Ô 5</div>
+            <div>Ô 6</div>
+          </div>
+          <p class="result">Khoảng cách hàng: 30px. Khoảng cách cột: 10px.</p>
+        </section>
+      </div>
+
+      <aside class="modern-note">
+        <p>
+          CSS hiện đại cũng cho phép viết <code>gap: 30px 10px</code>. Thuộc
+          tính <code>gap</code> dùng được với Grid và Flexbox.
+        </p>
+      </aside>
+    </main>
+  </body>
+</html>
