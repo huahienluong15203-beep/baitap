@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phim Hoạt Hình Online</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f2f4f8;
+        color: #1f2937;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .topbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #0f172a;
+        color: #fff;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .header-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 16px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      .logo-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #f59e0b, #ef4444);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+      }
+
+      .head-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .head-links a {
+        color: #dbeafe;
+        font-weight: 600;
+        transition: 0.2s ease;
+      }
+
+      .head-links a:hover {
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .page {
+        max-width: 1280px;
+        margin: 100px auto 30px;
+        padding: 0 20px;
+      }
+
+      .layout {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+      }
+
+      .sidebar {
+        flex: 0 0 280px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+        padding: 18px 16px;
+      }
+
+      .sidebar h3 {
+        margin: 0 0 16px;
+        color: #111827;
+        font-size: 1.1rem;
+      }
+
+      .video-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .video-item {
+        margin-bottom: 12px;
+      }
+
+      .video-item button {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        background: #f8fafc;
+        text-align: left;
+        cursor: pointer;
+        font-size: 0.96rem;
+        color: #1f2937;
+        transition: all 0.2s ease;
+      }
+
+      .video-item button:hover,
+      .video-item button.active {
+        background: #dbeafe;
+        border-color: #93c5fd;
+        color: #0f172a;
+        font-weight: 700;
+      }
+
+      .content {
+        flex: 1;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+        padding: 18px;
+      }
+
+      .video-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: #020817;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .video-frame video,
+      .video-frame iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+      }
+
+      .video-info {
+        padding-top: 18px;
+      }
+
+      .video-info h2 {
+        margin: 0 0 8px;
+        font-size: 1.6rem;
+      }
+
+      .meta {
+        color: #6b7280;
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+      }
+
+      .desc {
+        color: #374151;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      footer {
+        background: #111827;
+        color: #e5e7eb;
+        text-align: center;
+        padding: 20px 16px;
+        margin-top: 30px;
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 900px) {
+        .layout {
+          flex-direction: column;
+        }
+
+        .sidebar {
+          width: 100%;
+          flex-basis: auto;
+        }
+
+        .content {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .header-inner {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 12px 16px;
+        }
+
+        .page {
+          margin-top: 130px;
+          padding: 0 12px;
+        }
+
+        .head-links {
+          justify-content: flex-start;
+          gap: 12px;
+        }
+
+        .video-info h2 {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="header-inner">
+        <div class="logo">
+          <div class="logo-mark">TV</div>
+          <span>CartoonHub</span>
+        </div>
+
+        <nav class="head-links" aria-label="Main navigation">
+          <a href="#">Trang chủ</a>
+          <a href="#">Phim mới</a>
+          <a href="#">Xếp hạng</a>
+          <a href="#">Tìm kiếm</a>
+          <a href="#">Hỗ trợ</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page">
+      <div class="layout">
+        <aside class="sidebar">
+          <h3>Danh sách phim</h3>
+          <ul class="video-list">
+            <li class="video-item">
+              <button class="active" type="button">Sự Tích Dế Mèn</button>
+            </li>
+            <li class="video-item">
+              <button type="button">Tom và Jerry</button>
+            </li>
+            <li class="video-item">
+              <button type="button">Bông Tuyết và Đấng Tố Tận</button>
+            </li>
+            <li class="video-item">
+              <button type="button">Doraemon</button>
+            </li>
+            <li class="video-item">
+              <button type="button">Con Gấu Pooh</button>
+            </li>
+          </ul>
+        </aside>
+
+        <main class="content">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=7Tjefw3CjTBN1Lz0"
+              title="Video phim hoạt hình"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="video-info">
+            <h2>Sự Tích Dế Mèn</h2>
+            <div class="meta">Cập nhật mới • 1.2M lượt xem</div>
+            <p class="desc">
+              Phim hoạt hình tuyển chọn dành cho trẻ em, có nội dung phù hợp,
+              ngôn ngữ tiếng Việt, dễ hiểu và đầy tính giáo dục. Website giúp
+              người xem khám phá phim một cách đơn giản, nhanh chóng và không
+              quảng cáo.
+            </p>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <footer>
+      © 2026 CartoonHub. Bản quyền thuộc về website phim hoạt hình.
+    </footer>
+  </body>
+</html>
