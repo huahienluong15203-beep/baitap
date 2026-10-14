@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bố cục RWD bằng DIV</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #202b36;
+        background: #edf2f4;
+      }
+
+      .page {
+        width: min(1100px, calc(100% - 40px));
+        margin: 24px auto;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 22px 28px;
+        color: #fff;
+        background: #176b68;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 24px;
+      }
+
+      .nav a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .banner {
+        padding: 48px 28px;
+        color: #17324d;
+        background: #c9e7df;
+      }
+
+      .banner h1 {
+        margin: 0 0 12px;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+      }
+
+      .banner p {
+        max-width: 620px;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .content-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+        gap: 20px;
+        padding: 24px 0;
+      }
+
+      .main-content,
+      .sidebar {
+        min-width: 0;
+        padding: 24px;
+        background: #fff;
+        border: 1px solid #d5dfdf;
+        border-radius: 6px;
+      }
+
+      .main-content h2,
+      .sidebar h2 {
+        margin: 0 0 14px;
+      }
+
+      .main-content p,
+      .sidebar p {
+        line-height: 1.65;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 20px;
+      }
+
+      .card {
+        padding: 18px;
+        background: #f0f6f4;
+        border-left: 4px solid #e1a646;
+      }
+
+      .card h3 {
+        margin: 0 0 8px;
+      }
+
+      .card p {
+        margin: 0;
+      }
+
+      .footer {
+        padding: 20px;
+        color: #fff;
+        text-align: center;
+        background: #17324d;
+        border-radius: 0 0 8px 8px;
+      }
+
+      .footer p {
+        margin: 0;
+      }
+
+      @media (max-width: 700px) {
+        .page {
+          width: min(100% - 24px, 520px);
+          margin: 12px auto;
+        }
+
+        .header {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 20px;
+        }
+
+        .nav {
+          gap: 12px 18px;
+        }
+
+        .banner {
+          padding: 36px 20px;
+        }
+
+        .content-layout {
+          grid-template-columns: 1fr;
+          gap: 14px;
+          padding: 14px 0;
+        }
+
+        .main-content,
+        .sidebar {
+          padding: 20px;
+        }
+
+        .cards {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="header">
+        <div class="logo">GreenSpace</div>
+        <div class="nav">
+          <a href="#home">Trang chủ</a>
+          <a href="#content">Bài viết</a>
+          <a href="#sidebar">Thông tin</a>
+          <a href="#contact">Liên hệ</a>
+        </div>
+      </div>
+
+      <div class="banner" id="home">
+        <h1>Bố cục web responsive</h1>
+        <p>
+          Trang mẫu sử dụng DIV, CSS Grid, Flexbox và Media Queries. Hãy thu nhỏ
+          màn hình để xem các cột tự chuyển thành một cột.
+        </p>
+      </div>
+
+      <div class="content-layout">
+        <div class="main-content" id="content">
+          <h2>Nội dung chính</h2>
+          <p>
+            Khu vực nội dung chiếm phần lớn chiều rộng trên desktop. Khi màn
+            hình nhỏ hơn, nội dung sẽ xếp phía trên thanh bên để dễ đọc và không
+            tràn ngang.
+          </p>
+          <div class="cards">
+            <div class="card">
+              <h3>Thiết kế linh hoạt</h3>
+              <p>
+                Grid giúp sắp xếp các khối nội dung theo từng kích thước màn
+                hình.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Hiển thị rõ ràng</h3>
+              <p>Khoảng cách và chiều rộng được điều chỉnh cho màn hình nhỏ.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar" id="sidebar">
+          <h2>Thanh bên</h2>
+          <p>
+            Đây là khu vực thông tin bổ sung, nằm cạnh nội dung chính trên
+            desktop.
+          </p>
+          <p>Các vùng trong trang đều được tạo bằng DIV.</p>
+        </div>
+      </div>
+
+      <div class="footer" id="contact">
+        <p>&copy; 2026 GreenSpace. Bài thực hành HTML và CSS.</p>
+      </div>
+    </div>
+  </body>
+</html>
