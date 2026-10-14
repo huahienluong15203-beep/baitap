@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Layout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a class="brand" href="#main">FIELDNOTE</a>
+        <span class="header-note">Không gian làm việc sáng tạo</span>
+      </header>
+
+      <nav class="sidebar" aria-label="Điều hướng chính">
+        <p class="sidebar-label">Danh mục</p>
+        <ul class="sidebar-links">
+          <li><a class="active" href="#main">Tổng quan</a></li>
+          <li><a href="#projects">Dự án</a></li>
+          <li><a href="#resources">Tài nguyên</a></li>
+          <li><a href="#about">Giới thiệu</a></li>
+        </ul>
+      </nav>
+
+      <main class="content" id="main">
+        <div class="content-heading">
+          <p class="eyebrow">BẢNG ĐIỀU KHIỂN / 01</p>
+          <h1>Một không gian, nhiều ý tưởng.</h1>
+          <p class="lead">
+            Bố cục này dùng CSS Grid để kết hợp header, sidebar, nội dung chính
+            và footer; các vùng sẽ xếp dọc trên màn hình nhỏ.
+          </p>
+        </div>
+
+        <div class="content-cards" id="projects">
+          <section class="content-card">
+            <span class="card-number">01</span>
+            <h2>Dự án đang làm</h2>
+            <p>Gom các đầu việc quan trọng vào một khu vực dễ theo dõi.</p>
+          </section>
+          <section class="content-card" id="resources">
+            <span class="card-number">02</span>
+            <h2>Góc tài nguyên</h2>
+            <p>Lưu những ghi chú và cảm hứng hữu ích cho chặng tiếp theo.</p>
+          </section>
+          <section class="content-card" id="about">
+            <span class="card-number">03</span>
+            <h2>Tiến độ hôm nay</h2>
+            <p>Một bố cục gọn gàng giúp bạn dành sự tập trung cho công việc.</p>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <span>FIELDNOTE</span>
+        <span>Bố cục thực hành với CSS Grid</span>
+      </footer>
+    </div>
+  </body>
+</html>
