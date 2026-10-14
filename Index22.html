@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý Overflow</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+        font-family: Arial, sans-serif;
+      }
+
+      .overflow-box {
+        width: 300px;
+        height: 120px;
+        background-color: lightgray;
+        padding: 10px;
+        overflow: auto;
+        border: 2px solid #475569;
+        border-radius: 10px;
+        line-height: 1.6;
+        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overflow-box">
+      Đây là một đoạn văn bản rất dài mà chúng ta sẽ kiểm tra cách overflow hoạt động khi nội dung vượt quá kích thước
+      của phần tử. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies nunc in mauris pharetra,
+      a ultricies justo fermentum. Vestibulum non justo in augue malesuada blandit. Integer cursus, nibh ut vulputate
+      lobortis, nisl lectus posuere justo, sed malesuada tortor nibh et velit. Sed tristique, eros in efficitur viverra,
+      risus lectus volutpat justo, ut tincidunt neque ipsum vel risus. Donec aliquet nisl vitae nunc dictum, sit amet
+      pretium mauris bibendum.
+    </div>
+  </body>
+</html>
