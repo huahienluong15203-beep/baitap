@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bố cục bằng Float</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f3f4f6;
+      }
+
+      .container {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .left-column {
+        width: 60%;
+        float: left;
+        background-color: lightblue;
+        padding: 20px;
+        box-sizing: border-box;
+        min-height: 250px;
+        border-radius: 8px;
+      }
+
+      .right-column {
+        width: 38%;
+        float: right;
+        background-color: lightgreen;
+        padding: 20px;
+        min-height: 250px;
+        border-radius: 8px;
+        box-sizing: border-box;
+      }
+
+      .container::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-column">
+        <h2>Cột bên trái chứa nội dung chính</h2>
+        <p>
+          Đây là phần nội dung chính của trang. Bài này luyện tập kỹ thuật float để
+gắn cột trái và cột phải nằm song song trong cùng một hàng.
+        </p>
+        <p>
+          Khi sử dụng float, cần thêm clear để ngăn phần tử sau bị tràn ra ngoài bố
+          cục. Đây là cách cơ bản để tạo layout hai cột bằng CSS.
+        </p>
+      </div>
+
+      <div class="right-column">
+        <h2>Cột bên phải chứa sidebar</h2>
+        <p>Sidebar có thể chứa các liên kết, quảng cáo, tin tức, hoặc thông tin bổ sung.</p>
+      </div>
+    </div>
+  </body>
+</html>
