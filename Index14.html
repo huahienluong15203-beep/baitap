@@ -1,0 +1,184 @@
+﻿<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixed Header and Footer</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f3f6fb;
+        color: #1f2937;
+      }
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #1d3557;
+        display: flex;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+      }
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f1f5f9;
+        text-align: center;
+        padding: 18px 22px;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 600;
+        transition: background 0.3s ease;
+      }
+
+      .navbar a:hover {
+        background: #457b9d;
+      }
+
+      .main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 90px 20px 100px;
+      }
+
+      .main section {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        padding: 30px 25px;
+        margin: 25px 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0 0 15px;
+      }
+
+      p {
+        line-height: 1.7;
+        margin: 12px 0;
+      }
+
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: #0b132b;
+        color: #ffffff;
+        text-align: center;
+        padding: 18px 15px;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+      }
+
+      @media (max-width: 600px) {
+        .navbar {
+          justify-content: flex-start;
+          overflow-x: auto;
+        }
+
+        .navbar a {
+          white-space: nowrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
+
+    <div class="main">
+      <section id="home">
+        <h1>Fixed Top Menu</h1>
+        <h2>Scroll this page to see the effect</h2>
+        <p>
+          Menu sẽ luôn nằm ở trên cùng khi người dùng cuộn trang. Thiết kế này
+          giúp người dùng dễ dàng điều hướng giữa các phần nội dung mà không cần
+          phải kéo lên lại từ đầu trang.
+        </p>
+      </section>
+
+      <section id="news">
+        <h2>News</h2>
+        <p>
+          Một menu cố định không chỉ mang lại trải nghiệm tốt hơn mà còn giúp
+          giao diện trở nên chuyên nghiệp và dễ sử dụng hơn. Các trang tin tức,
+          thương mại điện tử hay portfolio thường ưu tiên kiểu menu này.
+        </p>
+        <p>
+          Khi người dùng cuộn xuống, menu vẫn hiện rõ ở vị trí cố định, tạo cảm
+          giác dễ điều hướng và tiết kiệm thời gian.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          Dù bạn đang ở đầu, giữa hay cuối trang, header vẫn luôn nằm ở vị trí
+          cố định. Điều này đặc biệt hữu ích cho các trang có lượng nội dung
+          dài.
+        </p>
+        <p>
+          Để làm được điều này, ta dùng thuộc tính position: fixed cho phần
+          navbar. Bên cạnh đó, cần có khoảng trống đủ cho nội dung chính để
+          không bị che mất khi cuộn xuống.
+        </p>
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          Fixed menu là một kỹ thuật phổ biến trong thiết kế web hiện đại. Tại
+          sao nó hiệu quả? Bởi vì nó giúp người dùng luôn biết mình đang ở đâu
+          trong website và truy cập nhanh vào các mục chính.
+        </p>
+        <p>
+          Kết hợp với footer cố định ở dưới cùng, trang web sẽ tạo cảm giác ổn
+          định, gọn gàng và dễ sử dụng hơn trên nhiều thiết bị.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </p>
+        <p>
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum. Curabitur pretium
+          tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et
+          commodo pharetra, est eros bibendum elit, nec luctus magna felis
+          sollicitudin mauris.
+        </p>
+        <p>
+          Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus
+          vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut
+          ullamcorper, ligula eu tempor congue, eros est euismod turpis, id
+          tincidunt sapien risus a quam. Maecenas fermentum consequat mi.
+        </p>
+      </section>
+    </div>
+
+    <div class="footer">© 2026 Fixed Header & Footer Demo</div>
+  </body>
+</html>

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixed Header và Fixed Footer</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #202a32;
+        background: #f4f6f3;
+        scroll-padding-top: 76px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 68px 0 58px;
+      }
+
+      .navbar {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 68px;
+        padding: 0 max(24px, calc((100% - 1000px) / 2));
+        background: #173b36;
+        box-shadow: 0 3px 12px rgb(18 40 36 / 16%);
+      }
+
+      .brand {
+        color: #f4f6f3;
+        font-size: 17px;
+        font-weight: 700;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .navbar-links {
+        display: flex;
+        gap: 6px;
+      }
+
+      .navbar-links a {
+        padding: 10px 12px;
+        border-radius: 4px;
+        color: #e5eee9;
+        font-size: 15px;
+        text-decoration: none;
+      }
+
+      .navbar-links a:hover,
+      .navbar-links a:focus-visible {
+        background: #31584f;
+        color: #fff;
+        outline: none;
+      }
+
+      main {
+        width: min(100% - 40px, 920px);
+        margin: 0 auto;
+      }
+
+      .intro {
+        padding: 54px 0 36px;
+        border-bottom: 1px solid #d7dfd9;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        color: #a14e31;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 650px;
+        margin-bottom: 14px;
+        color: #173b36;
+        font-size: clamp(34px, 7vw, 58px);
+        line-height: 1.05;
+      }
+
+      .intro p:last-child {
+        max-width: 620px;
+        margin-bottom: 0;
+        color: #52605b;
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      .content-section {
+        min-height: 330px;
+        padding: 42px 0;
+        border-bottom: 1px solid #d7dfd9;
+        scroll-margin-top: 76px;
+      }
+
+      .content-section h2 {
+        margin-bottom: 14px;
+        color: #173b36;
+        font-size: 27px;
+      }
+
+      .content-section p {
+        max-width: 720px;
+        color: #52605b;
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .site-footer {
+        position: fixed;
+        z-index: 10;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 58px;
+        padding: 12px 20px;
+        background: #e4e9e3;
+        color: #43504a;
+        font-size: 14px;
+        text-align: center;
+        box-shadow: 0 -3px 12px rgb(18 40 36 / 8%);
+      }
+
+      @media (max-width: 560px) {
+        body {
+          padding-top: 104px;
+        }
+
+        .navbar {
+          min-height: 104px;
+          flex-direction: column;
+          justify-content: center;
+          gap: 8px;
+          padding: 12px 10px;
+        }
+
+        .navbar-links {
+          width: 100%;
+          justify-content: center;
+          gap: 0;
+        }
+
+        .navbar-links a {
+          padding: 9px 10px;
+          font-size: 14px;
+        }
+
+        .intro {
+          padding-top: 38px;
+        }
+
+        .content-section {
+          min-height: 290px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <a class="brand" href="#home">Fixed Menu</a>
+      <nav class="navbar-links" aria-label="Điều hướng chính">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro" id="home">
+        <p class="eyebrow">Bài thực hành CSS</p>
+        <h1>Fixed Header và Fixed Footer</h1>
+        <p>
+          Thanh điều hướng luôn ở đầu trang và chân trang luôn ở cuối màn hình,
+          kể cả khi bạn cuộn qua nội dung bên dưới.
+        </p>
+      </section>
+
+      <section class="content-section" id="news">
+        <h2>News</h2>
+        <p>
+          Đây là khu vực nội dung đầu tiên. Hãy cuộn trang để quan sát thanh
+          điều hướng và footer vẫn giữ nguyên vị trí trên màn hình.
+        </p>
+        <p>
+          Thuộc tính <code>position: fixed</code> đưa phần tử ra khỏi luồng nội
+          dung thông thường. Vì vậy, phần nội dung chính cần có khoảng đệm ở
+          trên và dưới để không bị hai thanh che khuất.
+        </p>
+      </section>
+
+      <section class="content-section" id="contact">
+        <h2>Contact</h2>
+        <p>
+          Các liên kết trên header có thể đưa bạn đến từng khu vực. Header dùng
+          <code>top: 0</code> để nằm sát cạnh trên; footer dùng
+          <code>bottom: 0</code> để nằm sát cạnh dưới.
+        </p>
+        <p>
+          Chiều rộng của header và footer được đặt bằng 100%, nhờ đó chúng phủ
+          toàn bộ chiều ngang cửa sổ trình duyệt.
+        </p>
+      </section>
+
+      <section class="content-section" id="about">
+        <h2>About</h2>
+        <p>
+          Trên màn hình nhỏ, các liên kết điều hướng được sắp xếp thành hai hàng
+          gọn gàng. Phần nội dung vẫn có khoảng trống để dễ đọc và không bị che
+          bởi header hoặc footer cố định.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      Thực hành bố cục Fixed Header và Fixed Footer
+    </footer>
+  </body>
+</html>
