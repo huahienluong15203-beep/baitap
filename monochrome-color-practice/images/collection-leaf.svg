@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="57" x2="762" y1="30" y2="584" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E4F0DB"/>
+      <stop offset="1" stop-color="#93B98D"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="277" x2="532" y1="137" y2="477" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7CA878"/>
+      <stop offset="1" stop-color="#366954"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h800v620H0z"/>
+  <circle cx="401" cy="306" r="206" fill="#fff" fill-opacity=".24"/>
+  <path d="M373 497c-31-105-91-198-170-279 130-93 268-69 360-5-14 153-87 258-190 284Z" fill="url(#leaf)"/>
+  <path d="M372 496c18-114 75-209 190-283M372 496c-36-101-103-189-169-278M355 413l-93-30M382 360l-61-75M417 407l83-45M447 344l79-77" stroke="#E5F2D9" stroke-linecap="round" stroke-width="8" opacity=".8"/>
+  <path d="M142 128h116M142 151h70" stroke="#345247" stroke-linecap="round" stroke-width="7" opacity=".6"/>
+  <circle cx="628" cy="469" r="39" fill="#C6DDB9"/>
+  <circle cx="628" cy="469" r="17" fill="#fff" fill-opacity=".65"/>
+</svg>
