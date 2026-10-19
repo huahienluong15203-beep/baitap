@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Thực hành Bootstrap Containers và Grid System với bố cục responsive hai cột."
+    />
+    <meta name="theme-color" content="#183d36" />
+    <title>Bootstrap Grid System — Fieldnotes</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark site-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#top" aria-label="Fieldnotes trang chủ">
+          <span class="brand-mark" aria-hidden="true">F.</span>
+          <span>fieldnotes<span class="brand-period">.</span></span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#siteNavigation"
+          aria-controls="siteNavigation"
+          aria-expanded="false"
+          aria-label="Mở menu điều hướng"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNavigation">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#article">Bài viết</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">Giới thiệu</a></li>
+            <li class="nav-item dropdown">
+              <button
+                class="nav-link dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Khám phá
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#ideas">Ý tưởng nổi bật</a></li>
+                <li><a class="dropdown-item" href="#reading">Đọc thêm</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#footer">Thông tin</a></li>
+              </ul>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn nav-button" href="#newsletter">Theo dõi bản tin <span aria-hidden="true">↗</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead" id="top">
+      <div class="container masthead-inner">
+        <div class="masthead-copy">
+          <p class="eyebrow">Tạp chí về những điều được làm nên</p>
+          <h1>Ý tưởng tốt lớn lên từ những bước nhỏ.</h1>
+          <p>
+            Ghi chép về sáng tạo, thói quen và cách biến tò mò thành điều hữu ích.
+          </p>
+          <a class="masthead-link" href="#article">Đọc câu chuyện mới nhất <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="masthead-art" aria-hidden="true">
+          <div class="art-sun"></div>
+          <div class="art-arch art-arch-back"></div>
+          <div class="art-arch art-arch-front"></div>
+          <span class="art-label">ISSUE<br />№ 08</span>
+          <span class="art-leaf art-leaf-one"></span>
+          <span class="art-leaf art-leaf-two"></span>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page-content" id="article">
+      <div class="row g-4 g-xl-5">
+        <section class="col-12 col-lg-8 main-column" aria-labelledby="article-title">
+          <div class="article-meta">
+            <span class="category-tag">Sáng tạo &amp; thực hành</span>
+            <span>6 phút đọc</span>
+            <span aria-hidden="true">·</span>
+            <time datetime="2026-10-19">19 tháng 10, 2026</time>
+          </div>
+
+          <article>
+            <h2 id="article-title" class="article-title">
+              Tạo không gian cho những ý tưởng có ý nghĩa
+            </h2>
+            <p class="article-intro">
+              Không phải lúc nào chúng ta cũng cần một kế hoạch hoàn hảo. Đôi
+              khi, điều quan trọng là bắt đầu bằng một câu hỏi đủ hay — rồi dành
+              cho nó sự chú ý để tìm ra câu trả lời.
+            </p>
+
+            <div class="article-art" role="img" aria-label="Minh họa một trang sổ ghi chú với nét vẽ thực vật">
+              <div class="paper-sheet">
+                <span class="paper-overline">FIELD NOTES / 08</span>
+                <span class="paper-title">Make room<br />to begin.</span>
+                <span class="paper-rule"></span>
+                <span class="paper-caption">observe · explore · create</span>
+              </div>
+              <span class="article-art-stamp">A NOTE<br />TO SELF</span>
+              <span class="article-art-sprout" aria-hidden="true">✳</span>
+            </div>
+            <p class="image-caption">Mọi dự án đều bắt đầu từ một khoảnh khắc chú tâm.</p>
+
+            <h3 id="ideas">Bắt đầu trước khi mọi thứ thật hoàn hảo</h3>
+            <p>
+              Ta thường đợi đến khi có thêm thời gian, thêm tự tin hoặc thêm một
+              kế hoạch rõ ràng. Nhưng ý tưởng thường chỉ bộc lộ hình dáng khi ta
+              bắt tay vào làm. Một bản nháp còn vụng về cũng có thể giúp bạn
+              nhận ra điều gì cần giữ lại và điều gì nên thay đổi.
+            </p>
+            <p>
+              Hãy thử thu nhỏ bước đầu tiên: ghi lại một điều bạn muốn khám phá,
+              phác thảo ý tưởng trong vài phút, hoặc chia sẻ nó với một người
+              bạn tin tưởng. Bước nhỏ không làm mục tiêu kém quan trọng — nó
+              khiến mục tiêu trở nên gần hơn.
+            </p>
+
+            <blockquote class="article-quote">
+              <span aria-hidden="true">“</span>
+              <p>Tiến bộ không phải lúc nào cũng ồn ào. Đôi khi, nó chỉ là quyết định bắt đầu thêm một lần nữa.</p>
+            </blockquote>
+
+            <h3>Nuôi dưỡng sự tò mò mỗi ngày</h3>
+            <p>
+              Sự tò mò giúp chúng ta để ý đến những chi tiết thường bị bỏ qua.
+              Thay vì vội tìm câu trả lời đúng, hãy thử đặt thêm một câu hỏi:
+              Điều gì khiến cách làm này hiệu quả? Có lựa chọn nào đơn giản hơn?
+              Một góc nhìn khác sẽ thay đổi kết quả ra sao?
+            </p>
+            <ul class="article-list">
+              <li><span>01</span> Ghi lại một quan sát khiến bạn bất ngờ.</li>
+              <li><span>02</span> Chọn một câu hỏi và tìm hiểu sâu hơn.</li>
+              <li><span>03</span> Thử một ý tưởng nhỏ, rồi học từ kết quả.</li>
+            </ul>
+
+            <h3>Để quá trình dẫn lối</h3>
+            <p>
+              Khi ta dành chỗ cho thử nghiệm, kết quả không còn là điểm đến duy
+              nhất. Mỗi lần thử đều mang lại thông tin mới. Ghi chú những gì
+              hiệu quả, điều chỉnh khi cần, và để kinh nghiệm định hình bước
+              tiếp theo của bạn.
+            </p>
+
+            <div class="article-signoff">
+              <span class="author-avatar">F</span>
+              <div>
+                <strong>Ban biên tập Fieldnotes</strong>
+                <span>Những ghi chép cho hành trình sáng tạo</span>
+              </div>
+              <a href="#newsletter" class="share-link">Chia sẻ bài viết <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </section>
+
+        <aside class="col-12 col-lg-4 sidebar-column" aria-label="Thông tin bên lề">
+          <div class="sidebar-sticky">
+            <section class="sidebar-card about-card" id="about">
+              <p class="eyebrow">Về Fieldnotes</p>
+              <h2>Một góc nhỏ cho ý tưởng lớn.</h2>
+              <p>
+                Fieldnotes là tạp chí độc lập về sáng tạo, thói quen và những
+                cách làm hữu ích hơn mỗi ngày.
+              </p>
+              <a href="#newsletter">Tìm hiểu thêm <span aria-hidden="true">→</span></a>
+            </section>
+
+            <section class="sidebar-card reading-card" id="reading">
+              <div class="sidebar-heading">
+                <h2>Đọc thêm</h2>
+                <span>03 bài</span>
+              </div>
+              <a class="reading-item" href="#article">
+                <span class="reading-number">01</span>
+                <span><strong>Cách giữ lại những ý tưởng thoáng qua</strong><small>Thói quen · 4 phút</small></span>
+                <span class="reading-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="reading-item" href="#article">
+                <span class="reading-number">02</span>
+                <span><strong>Tìm cảm hứng trong những điều quen thuộc</strong><small>Sáng tạo · 5 phút</small></span>
+                <span class="reading-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="reading-item" href="#article">
+                <span class="reading-number">03</span>
+                <span><strong>Một quy trình linh hoạt bắt đầu ra sao?</strong><small>Thực hành · 7 phút</small></span>
+                <span class="reading-arrow" aria-hidden="true">↗</span>
+              </a>
+            </section>
+
+            <section class="sidebar-prompt">
+              <span class="prompt-icon" aria-hidden="true">✳</span>
+              <p class="eyebrow">Câu hỏi tuần này</p>
+              <h2>Điều gì bạn muốn thử, dù chỉ một lần?</h2>
+              <a href="#newsletter">Ghi lại câu trả lời <span aria-hidden="true">→</span></a>
+            </section>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <section class="newsletter-section" id="newsletter">
+      <div class="container">
+        <div class="newsletter-box">
+          <div>
+            <p class="eyebrow">Một lá thư nhỏ, mỗi tháng</p>
+            <h2>Nhận thêm ý tưởng vào hộp thư.</h2>
+            <p>Những ghi chép mới về sáng tạo và cách làm việc ý nghĩa hơn.</p>
+          </div>
+          <a class="newsletter-button" href="mailto:hello@fieldnotes.example?subject=Theo%20d%C3%B5i%20Fieldnotes">
+            Theo dõi Fieldnotes <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer" id="footer">
+      <div class="container footer-inner">
+        <a class="footer-brand" href="#top"><span class="brand-mark">F.</span> fieldnotes<span class="brand-period">.</span></a>
+        <p>Những ghi chép về sáng tạo và hành trình làm nên điều hữu ích.</p>
+        <span>© 2026 Fieldnotes. Bản mẫu thực hành Bootstrap Grid.</span>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
