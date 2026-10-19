@@ -1,0 +1,11 @@
+@use "tokens" as tokens;
+
+@mixin content-width {
+  width: min(#{tokens.$content-width}, 90%);
+  margin-inline: auto;
+}
+
+@mixin focus-ring {
+  outline: 3px solid tokens.$color-mint;
+  outline-offset: 4px;
+}

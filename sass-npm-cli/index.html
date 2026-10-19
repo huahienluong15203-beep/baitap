@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bài thực hành biên dịch SCSS sang CSS bằng npm và Sass CLI."
+    />
+    <title>Sass CLI — Bắt đầu từ SCSS</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Điều hướng chính">
+        <a class="brand" href="#">Sass<span>Lab</span></a>
+        <ul class="nav-links">
+          <li><a href="#features">Tính năng</a></li>
+          <li><a href="#workflow">Quy trình</a></li>
+          <li><a href="#footer">Tài nguyên</a></li>
+        </ul>
+      </nav>
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">SCSS · npm · Sass CLI</p>
+          <h1>Viết SCSS rõ ràng. Biên dịch CSS thật nhanh.</h1>
+          <p>
+            Tổ chức style với biến, lồng selector và partials. Dùng Sass CLI để
+            tạo CSS sẵn sàng cho trình duyệt.
+          </p>
+          <a class="button" href="#workflow">Xem quy trình</a>
+        </div>
+        <div class="code-card">
+          <div class="code-title">scss/main.scss</div>
+          <pre><code>@use "sass:color";
+
+<span class="code-keyword">$brand</span>: #496fe0;
+
+.button {
+  color: white;
+  background: <span class="code-keyword">$brand</span>;
+
+  &:hover {
+    background: color.adjust(<span class="code-keyword">$brand</span>, $lightness: -10%);
+  }
+}</code></pre>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="content" id="features">
+        <div class="section-heading">
+          <p class="eyebrow">Một công cụ, nhiều tiện ích</p>
+          <h2>SCSS giúp stylesheet dễ phát triển hơn</h2>
+          <p>
+            Sass bổ sung các tiện ích cho CSS và biên dịch thành CSS tiêu chuẩn
+            mà trình duyệt có thể đọc.
+          </p>
+        </div>
+        <div class="topic-grid">
+          <article class="topic-card">
+            <span class="topic-number">01</span>
+            <h3>Biến và giá trị dùng chung</h3>
+            <p>Lưu màu sắc, khoảng cách và các giá trị thiết kế tại một nơi.</p>
+          </article>
+          <article class="topic-card">
+            <span class="topic-number">02</span>
+            <h3>Nesting và partials</h3>
+            <p>Nhóm quy tắc có liên quan, chia style thành các file dễ quản lý.</p>
+          </article>
+          <article class="topic-card">
+            <span class="topic-number">03</span>
+            <h3>CLI và watch mode</h3>
+            <p>Tự động biên dịch một file hoặc cả thư mục khi có thay đổi.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content" id="workflow">
+        <div class="section-heading">
+          <p class="eyebrow">Quy trình cơ bản</p>
+          <h2>SCSS đầu vào → CSS đầu ra</h2>
+          <p>
+            Chạy lệnh build để biên dịch, hoặc bật watch để Sass tự cập nhật
+            CSS khi bạn lưu SCSS.
+          </p>
+        </div>
+        <article class="topic-card">
+          <h3>Lệnh trong dự án này</h3>
+          <p><code>npm install</code> cài Sass cục bộ, <code>npm run build</code> biên dịch nhiều file và <code>npm run watch</code> theo dõi thay đổi.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="footer-inner">
+        <p>SassLab — Bài thực hành npm và Sass CLI</p>
+        <p>© 2026 SassLab. Bảo lưu mọi quyền.</p>
+      </div>
+    </footer>
+  </body>
+</html>

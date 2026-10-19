@@ -1,0 +1,15 @@
+{
+  "name": "sass-npm-cli-practice",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Thuc hanh cai dat va su dung Sass CLI voi npm",
+  "scripts": {
+    "sass:version": "sass --version",
+    "build": "sass --no-source-map --style=expanded scss/:css/",
+    "build:single": "sass --no-source-map --style=expanded scss/main.scss css/main.css",
+    "watch": "sass --watch --no-source-map --style=expanded scss/:css/"
+  },
+  "devDependencies": {
+    "sass": "^1.105.2"
+  }
+}

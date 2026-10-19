@@ -1,0 +1,11 @@
+.sass-playground {
+  padding: 2rem;
+  border: 1px dashed #496fe0;
+  border-radius: 16px;
+  color: #1c2940;
+  background: #f3f6fb;
+}
+.sass-playground p {
+  margin: 0;
+  color: #62718a;
+}
