@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Đăng ký tài khoản và khám phá những lợi ích của dịch vụ."
+    />
+    <title>Đăng ký tài khoản | Nova</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+      body {
+        background: #f4f7fb;
+      }
+
+      .benefit-slide img {
+        height: 480px;
+        object-fit: cover;
+      }
+
+      @media (max-width: 767.98px) {
+        .benefit-slide img {
+          height: 320px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <i class="fa-solid fa-sparkles me-2" aria-hidden="true"></i>Nova
+        </a>
+        <span class="navbar-text text-white">
+          Đã có tài khoản?
+          <a class="link-light fw-semibold ms-1" href="#signup">Đăng ký ngay</a>
+        </span>
+      </div>
+    </nav>
+
+    <main class="container py-4 py-lg-5">
+      <div class="row align-items-center justify-content-center g-4 g-lg-5">
+        <section class="col-lg-7" aria-labelledby="benefits-heading">
+          <div class="mb-3">
+            <p class="text-primary text-uppercase fw-semibold small mb-2">
+              Bắt đầu miễn phí
+            </p>
+            <h1 id="benefits-heading" class="display-6 fw-bold">
+              Mở khóa trải nghiệm tốt hơn cùng Nova
+            </h1>
+            <p class="text-secondary mb-0">
+              Tạo tài khoản để quản lý công việc và kết nối với đội ngũ của bạn.
+            </p>
+          </div>
+
+          <div
+            id="benefitCarousel"
+            class="carousel slide shadow rounded overflow-hidden"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#benefitCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Lợi ích 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#benefitCarousel"
+                data-bs-slide-to="1"
+                aria-label="Lợi ích 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#benefitCarousel"
+                data-bs-slide-to="2"
+                aria-label="Lợi ích 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item benefit-slide active">
+                <img
+                  src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"
+                  class="d-block w-100"
+                  alt="Nhóm đồng nghiệp cùng trao đổi công việc"
+                />
+                <div class="carousel-caption text-start">
+                  <h2 class="h4 fw-bold">Cộng tác dễ dàng</h2>
+                  <p class="mb-0">Cùng đội ngũ theo dõi tiến độ ở một nơi.</p>
+                </div>
+              </div>
+              <div class="carousel-item benefit-slide">
+                <img
+                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"
+                  class="d-block w-100"
+                  alt="Không gian làm việc hiện đại và thoáng đãng"
+                />
+                <div class="carousel-caption text-start">
+                  <h2 class="h4 fw-bold">Làm việc linh hoạt</h2>
+                  <p class="mb-0">Truy cập không gian làm việc của bạn mọi lúc.</p>
+                </div>
+              </div>
+              <div class="carousel-item benefit-slide">
+                <img
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"
+                  class="d-block w-100"
+                  alt="Nhóm đang lên kế hoạch cùng nhau"
+                />
+                <div class="carousel-caption text-start">
+                  <h2 class="h4 fw-bold">Tập trung vào mục tiêu</h2>
+                  <p class="mb-0">Sắp xếp công việc rõ ràng và hiệu quả hơn.</p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#benefitCarousel"
+              data-bs-slide="prev"
+              aria-label="Lợi ích trước"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#benefitCarousel"
+              data-bs-slide="next"
+              aria-label="Lợi ích tiếp theo"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div class="row row-cols-1 row-cols-sm-3 g-3 mt-2">
+            <div class="col">
+              <div class="d-flex align-items-center gap-2 text-secondary">
+                <i class="fa-solid fa-circle-check text-success" aria-hidden="true"></i>
+                <span>Miễn phí đăng ký</span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-flex align-items-center gap-2 text-secondary">
+                <i class="fa-solid fa-shield-halved text-primary" aria-hidden="true"></i>
+                <span>Bảo mật thông tin</span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-flex align-items-center gap-2 text-secondary">
+                <i class="fa-solid fa-bolt text-warning" aria-hidden="true"></i>
+                <span>Thiết lập nhanh chóng</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="col-lg-5" id="signup" aria-labelledby="signup-heading">
+          <div class="card border-0 shadow">
+            <div class="card-body p-4 p-md-5">
+              <h2 id="signup-heading" class="h3 fw-bold mb-2">Tạo tài khoản</h2>
+              <p class="text-secondary mb-4">
+                Điền thông tin bên dưới để bắt đầu sử dụng Nova.
+              </p>
+
+              <form id="signupForm" novalidate>
+                <div class="mb-3">
+                  <label for="fullName" class="form-label">Họ và tên</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">
+                      <i class="fa-regular fa-user" aria-hidden="true"></i>
+                    </span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fullName"
+                      name="fullName"
+                      placeholder="Nguyễn Văn An"
+                      autocomplete="name"
+                      required
+                    />
+                    <div class="invalid-feedback">Vui lòng nhập họ và tên.</div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">
+                      <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                    </span>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="ban@example.com"
+                      autocomplete="email"
+                      required
+                    />
+                    <div class="invalid-feedback">Vui lòng nhập email hợp lệ.</div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="password" class="form-label">Mật khẩu</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">
+                      <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                    </span>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      name="password"
+                      placeholder="Ít nhất 8 ký tự"
+                      autocomplete="new-password"
+                      minlength="8"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Mật khẩu cần có ít nhất 8 ký tự.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="confirmPassword" class="form-label">
+                    Xác nhận mật khẩu
+                  </label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">
+                      <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                    </span>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="confirmPassword"
+                      name="confirmPassword"
+                      placeholder="Nhập lại mật khẩu"
+                      autocomplete="new-password"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Vui lòng nhập lại mật khẩu trùng khớp.
+                    </div>
+                  </div>
+                </div>
+
+                <div id="formNotice" class="alert alert-info d-none" role="status">
+                  Đây là giao diện minh họa; biểu mẫu chưa kết nối dịch vụ đăng ký.
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 py-2 mt-2">
+                  <i class="fa-solid fa-user-plus me-2" aria-hidden="true"></i>
+                  Tạo tài khoản
+                </button>
+                <p class="small text-secondary text-center mt-3 mb-0">
+                  Bằng việc đăng ký, bạn đồng ý với các điều khoản sử dụng dịch vụ.
+                </p>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="container text-center text-secondary small py-4">
+      © 2026 Nova. Bài thực hành Bootstrap Forms và Carousel.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const signupForm = document.getElementById("signupForm");
+      const passwordInput = document.getElementById("password");
+      const confirmPasswordInput = document.getElementById("confirmPassword");
+      const formNotice = document.getElementById("formNotice");
+
+      function validatePasswordMatch() {
+        confirmPasswordInput.setCustomValidity(
+          confirmPasswordInput.value === passwordInput.value
+            ? ""
+            : "Mật khẩu xác nhận không khớp.",
+        );
+      }
+
+      passwordInput.addEventListener("input", validatePasswordMatch);
+      confirmPasswordInput.addEventListener("input", validatePasswordMatch);
+
+      signupForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        validatePasswordMatch();
+        signupForm.classList.add("was-validated");
+        formNotice.classList.toggle("d-none", !signupForm.checkValidity());
+      });
+    </script>
+  </body>
+</html>
