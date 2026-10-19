@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Trang giới thiệu các chủ đề Web Technology, C Programming, Java và khóa học lập trình."
+    />
+    <title>CodeSpace — Khám phá thế giới lập trình</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #172033;
+        --muted: #637087;
+        --paper: #f5f7fb;
+        --navy: #111b35;
+        --blue: #79a7ff;
+        --mint: #8ce0c2;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: #fff;
+        font-family:
+          Inter, "Segoe UI", Roboto, Arial, sans-serif;
+        line-height: 1.65;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .navbar {
+        position: sticky;
+        z-index: 10;
+        top: 0;
+        display: flex;
+        min-height: 76px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 12px max(5vw, 24px);
+        border-bottom: 1px solid #e8edf5;
+        background: rgb(255 255 255 / 94%);
+        backdrop-filter: blur(12px);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--ink);
+        font-size: 1.2rem;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        place-items: center;
+        border-radius: 12px;
+        color: #fff;
+        background: linear-gradient(135deg, #3978ee, #765cf2);
+        font-size: 1rem;
+      }
+
+      .nav-list {
+        display: flex;
+        align-items: center;
+        gap: clamp(14px, 2.5vw, 34px);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav-list a {
+        color: #46536a;
+        font-size: 0.94rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 160ms ease;
+      }
+
+      .nav-list a:hover,
+      .nav-list a:focus-visible {
+        color: #3169dc;
+      }
+
+      .nav-cta,
+      .button {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 18px;
+        border: 0;
+        border-radius: 10px;
+        color: #fff;
+        background: #3169dc;
+        font: inherit;
+        font-weight: 700;
+        text-decoration: none;
+        transition:
+          background 160ms ease,
+          transform 160ms ease;
+      }
+
+      .nav-cta:hover,
+      .button:hover {
+        transform: translateY(-2px);
+        background: #2455bd;
+      }
+
+      .hero {
+        overflow: hidden;
+        color: #fff;
+        background:
+          radial-gradient(ellipse at 78% 15%, rgb(116 151 255 / 28%), transparent 35%),
+          linear-gradient(130deg, #101a33, #182953 65%, #253c77);
+      }
+
+      .hero-inner {
+        display: flex;
+        width: min(1160px, 90%);
+        min-height: 590px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 52px;
+        margin: 0 auto;
+        padding: 72px 0;
+      }
+
+      .hero-copy {
+        max-width: 610px;
+      }
+
+      .eyebrow {
+        margin: 0 0 14px;
+        color: var(--blue);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .hero h1 {
+        margin: 0 0 20px;
+        font-size: clamp(2.7rem, 6vw, 5rem);
+        letter-spacing: -0.065em;
+        line-height: 1.05;
+      }
+
+      .hero-copy > p:not(.eyebrow) {
+        max-width: 560px;
+        margin: 0 0 28px;
+        color: #d3dcf0;
+        font-size: clamp(1rem, 1.8vw, 1.2rem);
+      }
+
+      .hero .button {
+        color: #102043;
+        background: var(--mint);
+      }
+
+      .hero .button:hover {
+        background: #a9f0d9;
+      }
+
+      .hero-note {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 26px 0 0;
+        color: #bec9e0;
+        font-size: 0.9rem;
+      }
+
+      .hero-note span {
+        display: inline-grid;
+        width: 28px;
+        height: 28px;
+        place-items: center;
+        border-radius: 50%;
+        color: var(--mint);
+        background: rgb(255 255 255 / 10%);
+      }
+
+      .code-window {
+        width: min(100%, 410px);
+        flex: 0 0 380px;
+        overflow: hidden;
+        border: 1px solid rgb(255 255 255 / 16%);
+        border-radius: 18px;
+        background: rgb(9 16 33 / 80%);
+        box-shadow: 0 28px 80px rgb(0 0 0 / 30%);
+        transform: rotate(2deg);
+      }
+
+      .window-bar {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 15px 18px;
+        border-bottom: 1px solid rgb(255 255 255 / 10%);
+      }
+
+      .window-dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #fc766b;
+      }
+
+      .window-dot:nth-child(2) {
+        background: #f7c75e;
+      }
+
+      .window-dot:nth-child(3) {
+        background: #66d39a;
+      }
+
+      .code-window pre {
+        overflow-x: auto;
+        margin: 0;
+        padding: 26px;
+        color: #c7d6f3;
+        font: 0.95rem/1.9 Consolas, "Courier New", monospace;
+      }
+
+      .code-blue {
+        color: #80b5ff;
+      }
+
+      .code-mint {
+        color: #8ce0c2;
+      }
+
+      .code-yellow {
+        color: #f4d486;
+      }
+
+      .section {
+        display: flex;
+        width: min(1120px, 90%);
+        min-height: 410px;
+        align-items: center;
+        justify-content: space-between;
+        gap: clamp(36px, 7vw, 100px);
+        margin: 0 auto;
+        padding: 76px 0;
+      }
+
+      .section-left {
+        flex-direction: row-reverse;
+      }
+
+      .section-copy,
+      .visual {
+        flex: 1 1 0;
+      }
+
+      .section-copy h2 {
+        margin: 0 0 16px;
+        font-size: clamp(2rem, 4vw, 3rem);
+        letter-spacing: -0.05em;
+        line-height: 1.15;
+      }
+
+      .section-copy p {
+        margin: 0 0 20px;
+        color: var(--muted);
+      }
+
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin: 22px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .tag-list li {
+        padding: 6px 12px;
+        border: 1px solid #dce5f2;
+        border-radius: 999px;
+        color: #485873;
+        background: #fff;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      .visual {
+        display: grid;
+        min-height: 280px;
+        place-items: center;
+        overflow: hidden;
+        border-radius: 24px;
+      }
+
+      .visual-web {
+        color: #dce8ff;
+        background:
+          radial-gradient(circle at 70% 25%, rgb(94 150 255 / 40%), transparent 30%),
+          linear-gradient(145deg, #1d3264, #3568c9);
+      }
+
+      .browser-card {
+        width: 74%;
+        overflow: hidden;
+        border: 1px solid rgb(255 255 255 / 45%);
+        border-radius: 14px;
+        background: #fff;
+        box-shadow: 0 20px 50px rgb(5 16 40 / 22%);
+        transform: rotate(-4deg);
+      }
+
+      .browser-top {
+        height: 28px;
+        padding: 9px 12px;
+        background: #eef2f8;
+      }
+
+      .browser-top::before {
+        display: block;
+        width: 46px;
+        height: 7px;
+        border-radius: 5px;
+        background: #c3ccdc;
+        content: "";
+      }
+
+      .browser-content {
+        padding: 22px;
+      }
+
+      .browser-content span {
+        display: block;
+        width: 70%;
+        height: 9px;
+        margin: 9px 0;
+        border-radius: 5px;
+        background: #d8e4f7;
+      }
+
+      .browser-content span:first-child {
+        width: 42%;
+        height: 14px;
+        background: #6b91e4;
+      }
+
+      .browser-content span:last-child {
+        width: 54%;
+      }
+
+      .section-tint {
+        background: var(--paper);
+      }
+
+      .code-visual {
+        display: flex;
+        min-height: 280px;
+        align-items: center;
+        justify-content: center;
+        padding: 26px;
+        border-radius: 24px;
+        background: #e8f4ef;
+      }
+
+      .code-visual pre {
+        width: min(100%, 410px);
+        margin: 0;
+        padding: 25px;
+        border: 1px solid #d4e8de;
+        border-radius: 16px;
+        color: #29493f;
+        background: #fff;
+        box-shadow: 0 16px 40px rgb(24 81 62 / 9%);
+        font: 0.93rem/1.9 Consolas, "Courier New", monospace;
+      }
+
+      .java-visual {
+        color: #fff2d5;
+        background:
+          radial-gradient(circle at 25% 30%, rgb(255 202 112 / 30%), transparent 28%),
+          linear-gradient(145deg, #834633, #c36b45);
+      }
+
+      .java-mark {
+        display: grid;
+        width: 150px;
+        height: 150px;
+        place-items: center;
+        border: 1px solid rgb(255 255 255 / 35%);
+        border-radius: 36px;
+        background: rgb(255 255 255 / 12%);
+        font-size: 4.5rem;
+        font-weight: 800;
+        box-shadow: 0 24px 55px rgb(62 27 16 / 22%);
+        transform: rotate(-8deg);
+      }
+
+      .courses {
+        padding: 78px 5%;
+        color: #fff;
+        background: var(--navy);
+        text-align: center;
+      }
+
+      .courses-inner {
+        width: min(1060px, 100%);
+        margin: 0 auto;
+      }
+
+      .courses h2 {
+        margin: 0 0 12px;
+        font-size: clamp(2rem, 4vw, 3rem);
+        letter-spacing: -0.05em;
+      }
+
+      .courses-intro {
+        max-width: 620px;
+        margin: 0 auto;
+        color: #c0cbe0;
+      }
+
+      .course-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 38px;
+        text-align: left;
+      }
+
+      .course-card {
+        padding: 24px;
+        border: 1px solid rgb(255 255 255 / 13%);
+        border-radius: 16px;
+        background: rgb(255 255 255 / 6%);
+      }
+
+      .course-card span {
+        color: var(--mint);
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .course-card h3 {
+        margin: 10px 0;
+        font-size: 1.2rem;
+      }
+
+      .course-card p {
+        margin: 0;
+        color: #c0cbe0;
+        font-size: 0.94rem;
+      }
+
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 25px max(5vw, 24px);
+        color: #aeb9cf;
+        background: #0c1428;
+        font-size: 0.9rem;
+      }
+
+      .footer p {
+        margin: 0;
+      }
+
+      .footer a {
+        color: #dbe5f8;
+        text-decoration: none;
+      }
+
+      @media (max-width: 800px) {
+        .navbar {
+          flex-wrap: wrap;
+          gap: 12px 20px;
+        }
+
+        .nav-list {
+          order: 3;
+          width: 100%;
+          justify-content: center;
+          padding-top: 8px;
+          border-top: 1px solid #edf0f5;
+        }
+
+        .nav-cta {
+          margin-left: auto;
+        }
+
+        .hero-inner {
+          min-height: auto;
+          gap: 32px;
+          padding: 64px 0;
+        }
+
+        .code-window {
+          flex-basis: 300px;
+        }
+
+        .section {
+          min-height: auto;
+          gap: 34px;
+          padding: 62px 0;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .navbar {
+          padding-right: 5%;
+          padding-left: 5%;
+        }
+
+        .nav-list {
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          gap: 10px 20px;
+        }
+
+        .nav-cta {
+          min-height: 40px;
+          padding: 8px 12px;
+          font-size: 0.88rem;
+        }
+
+        .hero-inner,
+        .section,
+        .section-left {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .hero-inner {
+          width: 90%;
+          padding: 54px 0;
+        }
+
+        .code-window {
+          width: 92%;
+          flex-basis: auto;
+          align-self: center;
+          transform: none;
+        }
+
+        .section {
+          width: 90%;
+          padding: 52px 0;
+        }
+
+        .visual,
+        .code-visual {
+          min-height: 230px;
+        }
+
+        .course-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .footer {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 6px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar" aria-label="Điều hướng chính">
+      <a class="brand" href="#" aria-label="CodeSpace - Trang chủ">
+        <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+        CodeSpace
+      </a>
+      <ul class="nav-list">
+        <li><a href="#web">Web Technology</a></li>
+        <li><a href="#program">C Programming</a></li>
+        <li><a href="#java">Java</a></li>
+        <li><a href="#course">Khóa học</a></li>
+      </ul>
+      <a class="nav-cta" href="#course">Bắt đầu học</a>
+    </nav>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Học lập trình theo cách của bạn</p>
+            <h1 id="hero-title">Bắt đầu từ ý tưởng. Tiến xa cùng code.</h1>
+            <p>
+              Khám phá những nền tảng công nghệ quan trọng và xây dựng kỹ năng
+              để biến ý tưởng của bạn thành sản phẩm thực tế.
+            </p>
+            <a class="button" href="#web">Khám phá chủ đề</a>
+            <p class="hero-note">
+              <span aria-hidden="true">✓</span>
+              Nội dung dễ hiểu, phù hợp cho người mới bắt đầu
+            </p>
+          </div>
+
+          <div class="code-window" aria-label="Ví dụ đoạn mã HTML">
+            <div class="window-bar" aria-hidden="true">
+              <span class="window-dot"></span>
+              <span class="window-dot"></span>
+              <span class="window-dot"></span>
+            </div>
+            <pre><code><span class="code-blue">&lt;section&gt;</span>
+  <span class="code-blue">&lt;h1&gt;</span>
+    <span class="code-mint">Hello, world!</span>
+  <span class="code-blue">&lt;/h1&gt;</span>
+  <span class="code-yellow">&lt;!-- Your idea starts here --&gt;</span>
+<span class="code-blue">&lt;/section&gt;</span></code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="web">
+        <div class="section-copy">
+          <p class="eyebrow">01 / Nền tảng web</p>
+          <h2 id="web">Web Technology</h2>
+          <p>
+            HTML tạo nên cấu trúc nội dung, CSS định hình giao diện và
+            JavaScript giúp trang web trở nên tương tác. Cùng tìm hiểu cách
+            trình duyệt kết hợp những công nghệ này để tạo nên trải nghiệm web.
+          </p>
+          <ul class="tag-list" aria-label="Công nghệ web">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Responsive design</li>
+          </ul>
+        </div>
+        <div class="visual visual-web" aria-hidden="true">
+          <div class="browser-card">
+            <div class="browser-top"></div>
+            <div class="browser-content">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-tint">
+        <section class="section section-left" aria-labelledby="program">
+          <div class="section-copy">
+            <p class="eyebrow">02 / Tư duy nền tảng</p>
+            <h2 id="program">C Programming</h2>
+            <p>
+              C là ngôn ngữ lập trình thủ tục mạnh mẽ, thường được dùng để tìm
+              hiểu cách máy tính quản lý bộ nhớ và thực thi chương trình. Đây
+              cũng là nền tảng hữu ích để rèn luyện tư duy giải quyết vấn đề.
+            </p>
+            <ul class="tag-list" aria-label="Chủ đề C Programming">
+              <li>Biến và kiểu dữ liệu</li>
+              <li>Hàm</li>
+              <li>Mảng</li>
+              <li>Con trỏ</li>
+            </ul>
+          </div>
+          <div class="code-visual" aria-label="Ví dụ chương trình C">
+            <pre><code><span class="code-blue">#include</span> &lt;stdio.h&gt;
+
+<span class="code-blue">int</span> main(void) {
+    printf(<span class="code-mint">"Hello, world!\n"</span>);
+    <span class="code-blue">return</span> 0;
+}</code></pre>
+          </div>
+        </section>
+      </div>
+
+      <section class="section" aria-labelledby="java">
+        <div class="section-copy">
+          <p class="eyebrow">03 / Lập trình hướng đối tượng</p>
+          <h2 id="java">Java</h2>
+          <p>
+            Java là ngôn ngữ hướng đối tượng phổ biến. Mã nguồn được biên dịch
+            thành bytecode và chạy trên Java Virtual Machine, giúp chương trình
+            có thể hoạt động trên nhiều nền tảng khác nhau.
+          </p>
+          <ul class="tag-list" aria-label="Chủ đề Java">
+            <li>Class và Object</li>
+            <li>JVM</li>
+            <li>Collections</li>
+            <li>Ứng dụng đa nền tảng</li>
+          </ul>
+        </div>
+        <div class="visual java-visual" aria-label="Biểu tượng Java">
+          <div class="java-mark" aria-hidden="true">J</div>
+        </div>
+      </section>
+
+      <section class="courses" id="course" aria-labelledby="course-heading">
+        <div class="courses-inner">
+          <p class="eyebrow">Lộ trình của bạn</p>
+          <h2 id="course-heading">Chọn chủ đề, bắt đầu hành trình</h2>
+          <p class="courses-intro">
+            Đi từ kiến thức cơ bản đến những khái niệm cốt lõi qua các chủ đề
+            được sắp xếp rõ ràng.
+          </p>
+          <div class="course-grid">
+            <article class="course-card">
+              <span>01 · Front-end</span>
+              <h3>Xây dựng trang web đầu tiên</h3>
+              <p>Khám phá HTML, CSS và cách tạo bố cục tương thích nhiều màn hình.</p>
+            </article>
+            <article class="course-card">
+              <span>02 · Cơ bản</span>
+              <h3>Tư duy lập trình với C</h3>
+              <p>Làm quen với thuật toán, cấu trúc chương trình và quản lý dữ liệu.</p>
+            </article>
+            <article class="course-card">
+              <span>03 · Hướng đối tượng</span>
+              <h3>Khám phá Java</h3>
+              <p>Tìm hiểu class, object và nguyên lý chạy ứng dụng trên JVM.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 CodeSpace. Cùng nhau học hỏi và sáng tạo.</p>
+      <a href="#hero-title">Về đầu trang ↑</a>
+    </footer>
+  </body>
+</html>
