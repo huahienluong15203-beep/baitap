@@ -1,0 +1,13 @@
+{
+  "name": "sass-product-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Refactor product showcase styling with Sass variables and mixins",
+  "scripts": {
+    "build": "sass --no-source-map --style=expanded scss/main.scss css/main.css",
+    "watch": "sass --watch --no-source-map --style=expanded scss/main.scss:css/main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.105.2"
+  }
+}

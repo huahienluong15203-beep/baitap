@@ -1,0 +1,15 @@
+$color-text: #172033;
+$color-background: #fff;
+$color-hero-glow: rgb(161 141 255 / 30%);
+$color-hero-start: #f5f3ff;
+$color-hero-middle: #eef4ff;
+
+$hero-background: radial-gradient(
+    circle at 75% 45%,
+    $color-hero-glow,
+    transparent 30%
+  ),
+  linear-gradient(135deg, $color-hero-start, $color-hero-middle 65%, $color-background);
+
+$product-image-max-height: 480px;
+$feature-icon-size: 3.5rem;

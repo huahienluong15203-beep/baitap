@@ -1,0 +1,17 @@
+body {
+  color: #172033;
+  background: #fff;
+}
+
+.product-hero {
+  background: radial-gradient(circle at 75% 45%, rgba(161, 141, 255, 0.3), transparent 30%), linear-gradient(135deg, #f5f3ff, #eef4ff 65%, #fff);
+}
+.product-hero .product-image {
+  max-height: 480px;
+  object-fit: contain;
+}
+
+.feature-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
