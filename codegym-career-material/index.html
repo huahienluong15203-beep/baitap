@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Khám phá chương trình CodeGym Career với hệ thống học tập, luyện code, quản lý dự án và theo dõi tiến độ."
+    />
+    <meta name="theme-color" content="#302d63" />
+    <title>CodeGym Career — Học tập gắn với thực hành</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top cg-navbar">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#home" aria-label="CodeGym Career - trang chủ">
+          <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+          <span class="brand-name">CodeGym <strong>Career</strong></span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#mainNavigation"
+          aria-controls="mainNavigation"
+          aria-expanded="false"
+          aria-label="Mở menu điều hướng"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavigation">
+          <ul class="navbar-nav ml-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#program">Chương trình</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tools">Hệ thống học tập</a></li>
+            <li class="nav-item"><a class="nav-link" href="#method">Phương pháp</a></li>
+            <li class="nav-item ml-lg-2">
+              <a class="btn btn-outline-light btn-sm nav-cta" href="#contact">Tìm hiểu thêm</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <header class="hero-section" id="home">
+        <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+        <div class="container hero-container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 hero-copy">
+              <span class="hero-kicker"><i class="fas fa-code mr-2" aria-hidden="true"></i> CODING BOOTCAMP · CODEGYM CAREER</span>
+              <h1>Học lập trình bằng cách <span>tạo ra sản phẩm.</span></h1>
+              <p class="hero-lead">
+                Học trực tuyến, luyện code, thực hành dự án và xây dựng hồ sơ
+                năng lực trong một hành trình học tập có người hướng dẫn đồng hành.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-material btn-lg" href="#program">
+                  Khám phá chương trình <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+                </a>
+                <a
+                  class="btn btn-outline-light btn-lg"
+                  href="https://codegym.vn/codegym-career/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Trang CodeGym Career <i class="fas fa-external-link-alt ml-2" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div class="hero-note">
+                <span class="note-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></span>
+                <span>Một không gian số kết nối nội dung học tập, thực hành và tiến độ.</span>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="learning-visual" role="img" aria-label="Minh họa bảng học tập với bài học, dự án và luyện code">
+                <div class="visual-orbit"></div>
+                <div class="code-window z-depth-3">
+                  <div class="window-bar">
+                    <span></span><span></span><span></span>
+                    <small>learning-path.js</small>
+                  </div>
+                  <div class="code-content">
+                    <p><span class="code-muted">01</span> <span class="code-purple">const</span> <span class="code-cyan">learningPath</span> = [</p>
+                    <p><span class="code-muted">02</span> &nbsp; <span class="code-green">'learn'</span>,</p>
+                    <p><span class="code-muted">03</span> &nbsp; <span class="code-green">'practice'</span>,</p>
+                    <p><span class="code-muted">04</span> &nbsp; <span class="code-green">'build projects'</span></p>
+                    <p><span class="code-muted">05</span> ];</p>
+                    <p class="code-last"><span class="code-muted">06</span> <span class="code-purple">keepGoing</span>(); <span class="code-cursor"></span></p>
+                  </div>
+                  <div class="window-status"><span></span> Đang thực hành <span class="ml-auto">Bài tập 04</span></div>
+                </div>
+                <div class="floating-card floating-video z-depth-2">
+                  <span class="floating-icon video-icon"><i class="fas fa-play" aria-hidden="true"></i></span>
+                  <span><strong>Video hướng dẫn</strong><small>Học theo từng bước</small></span>
+                </div>
+                <div class="floating-card floating-project z-depth-2">
+                  <span class="floating-icon project-icon"><i class="fas fa-tasks" aria-hidden="true"></i></span>
+                  <span><strong>Dự án thực hành</strong><small>Tiến độ được ghi nhận</small></span>
+                  <i class="fas fa-check-circle project-check" aria-hidden="true"></i>
+                </div>
+                <div class="visual-label"><i class="fas fa-bolt mr-1" aria-hidden="true"></i> Learn by doing</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#program" aria-label="Cuộn đến nội dung chương trình">
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </a>
+      </header>
+
+      <section class="section-space intro-section" id="program">
+        <div class="container">
+          <div class="section-heading text-center mx-auto">
+            <span class="section-kicker">Học tập gắn với thực hành</span>
+            <h2>Mỗi bước học đều có <span>mục tiêu rõ ràng.</span></h2>
+            <p>
+              CodeGym Career kết hợp hệ thống học tập số với sự đồng hành của
+              huấn luyện viên, giúp học viên theo dõi tiến độ và rèn luyện qua
+              nhiều hình thức thực hành.
+            </p>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-4 mb-4">
+              <article class="material-card card h-100 z-depth-1">
+                <div class="card-body">
+                  <span class="feature-icon feature-violet"><i class="fas fa-book-open" aria-hidden="true"></i></span>
+                  <span class="feature-number">01 / NỘI DUNG</span>
+                  <h3 class="card-title">Học liệu đa dạng</h3>
+                  <p class="card-text">
+                    Tiếp cận video hướng dẫn, bài đọc, bài thực hành, bài tập
+                    và quiz trong bộ tài liệu khóa học.
+                  </p>
+                  <a class="card-link" href="#tools">Xem hệ thống học tập <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i></a>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4 mb-4">
+              <article class="material-card card h-100 z-depth-1">
+                <div class="card-body">
+                  <span class="feature-icon feature-coral"><i class="fas fa-laptop-code" aria-hidden="true"></i></span>
+                  <span class="feature-number">02 / THỰC HÀNH</span>
+                  <h3 class="card-title">Luyện code và dự án</h3>
+                  <p class="card-text">
+                    Rèn kỹ năng qua hệ thống luyện code và quản lý dự án, đưa
+                    kiến thức vào các nhiệm vụ thực hành.
+                  </p>
+                  <a class="card-link" href="#method">Tìm hiểu phương pháp <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i></a>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4 mb-4">
+              <article class="material-card card h-100 z-depth-1">
+                <div class="card-body">
+                  <span class="feature-icon feature-mint"><i class="fas fa-user-check" aria-hidden="true"></i></span>
+                  <span class="feature-number">03 / ĐỒNG HÀNH</span>
+                  <h3 class="card-title">Theo dõi và điều chỉnh</h3>
+                  <p class="card-text">
+                    Huấn luyện viên theo dõi, đánh giá năng lực để lựa chọn
+                    phương pháp đào tạo phù hợp với từng học viên.
+                  </p>
+                  <a class="card-link" href="#coaching">Về sự đồng hành <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i></a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tools-section section-space" id="tools">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+              <span class="section-kicker">Không gian học tập số</span>
+              <h2 class="section-title">Những công cụ cần thiết, <span>ở cùng một nơi.</span></h2>
+              <p class="section-copy">
+                Một hệ sinh thái hỗ trợ học viên từ lúc tiếp cận kiến thức đến
+                khi thực hành và lưu lại kết quả học tập.
+              </p>
+              <a class="btn btn-material" href="https://codegym.vn/codegym-career/" target="_blank" rel="noreferrer">
+                Tìm hiểu CodeGym Career <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="col-lg-7">
+              <div class="tool-grid">
+                <article class="tool-card tool-card-large">
+                  <span class="tool-icon"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i></span>
+                  <h3>Học trực tuyến</h3>
+                  <p>Truy cập nội dung và tài liệu học tập theo lộ trình.</p>
+                  <span class="tool-decoration" aria-hidden="true">01</span>
+                </article>
+                <article class="tool-card tool-card-offset">
+                  <span class="tool-icon tool-icon-coral"><i class="fas fa-code" aria-hidden="true"></i></span>
+                  <h3>Luyện code</h3>
+                  <p>Rèn kỹ năng lập trình qua bài tập thực hành.</p>
+                  <span class="tool-decoration" aria-hidden="true">02</span>
+                </article>
+                <article class="tool-card">
+                  <span class="tool-icon tool-icon-mint"><i class="fas fa-project-diagram" aria-hidden="true"></i></span>
+                  <h3>Quản lý dự án</h3>
+                  <p>Theo dõi công việc và các bước của dự án học tập.</p>
+                  <span class="tool-decoration" aria-hidden="true">03</span>
+                </article>
+                <article class="tool-card tool-card-offset">
+                  <span class="tool-icon tool-icon-yellow"><i class="fas fa-id-card" aria-hidden="true"></i></span>
+                  <h3>Hồ sơ năng lực</h3>
+                  <p>Lưu trữ và giới thiệu quá trình rèn luyện của bạn.</p>
+                  <span class="tool-decoration" aria-hidden="true">04</span>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="method-section section-space" id="method">
+        <div class="container">
+          <div class="section-heading text-center mx-auto">
+            <span class="section-kicker">Từ kiến thức đến năng lực</span>
+            <h2>Một hành trình học tập <span>liền mạch.</span></h2>
+            <p>
+              Kết hợp nội dung học, luyện tập, dự án và hướng dẫn để biến từng
+              chủ đề thành cơ hội áp dụng kiến thức.
+            </p>
+          </div>
+          <div class="row journey-row">
+            <div class="col-md-3 journey-step">
+              <span class="journey-index">01</span>
+              <div class="journey-connector"></div>
+              <h3>Tiếp cận</h3>
+              <p>Video và bài đọc giới thiệu kiến thức theo chủ đề.</p>
+            </div>
+            <div class="col-md-3 journey-step">
+              <span class="journey-index">02</span>
+              <div class="journey-connector"></div>
+              <h3>Luyện tập</h3>
+              <p>Bài thực hành, bài tập và quiz củng cố kỹ năng.</p>
+            </div>
+            <div class="col-md-3 journey-step">
+              <span class="journey-index">03</span>
+              <div class="journey-connector"></div>
+              <h3>Ứng dụng</h3>
+              <p>Thực hành qua luyện code và các dự án học tập.</p>
+            </div>
+            <div class="col-md-3 journey-step">
+              <span class="journey-index">04</span>
+              <div class="journey-connector"></div>
+              <h3>Phát triển</h3>
+              <p>Ghi nhận năng lực và điều chỉnh cách học cùng huấn luyện viên.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="coach-section section-space" id="coaching">
+        <div class="container">
+          <div class="coach-panel z-depth-2">
+            <div class="coach-art" aria-hidden="true">
+              <div class="coach-circle coach-circle-back"></div>
+              <div class="coach-circle coach-circle-front">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <span class="coach-bubble bubble-one"><i class="fas fa-check"></i></span>
+              <span class="coach-bubble bubble-two"><i class="fas fa-comment-dots"></i></span>
+              <span class="coach-sparkle">✦</span>
+            </div>
+            <div class="coach-copy">
+              <span class="section-kicker">Đồng hành theo năng lực</span>
+              <h2>Không chỉ học nội dung — còn được theo dõi và hỗ trợ.</h2>
+              <p>
+                Hệ thống số giúp huấn luyện viên theo dõi và đánh giá năng lực
+                của từng học viên, từ đó có phương pháp đào tạo phù hợp hơn.
+              </p>
+              <a class="btn btn-material" href="#contact">
+                Bắt đầu tìm hiểu <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="source-note-section">
+        <div class="container">
+          <div class="source-note">
+            <span class="source-quote-icon" aria-hidden="true">“</span>
+            <p>
+              Hệ thống số hỗ trợ học viên tiếp cận học liệu, thực hành và giúp
+              huấn luyện viên theo dõi, đánh giá để lựa chọn phương pháp đào tạo phù hợp.
+            </p>
+            <span class="source-attribution">Tóm lược nội dung từ trang CodeGym Career</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta section-space" id="contact">
+        <div class="container">
+          <div class="final-cta-inner text-center">
+            <span class="section-kicker">Khởi đầu hành trình của bạn</span>
+            <h2>Sẵn sàng khám phá một cách học lập trình thực tiễn?</h2>
+            <p>
+              Tìm hiểu thêm về nội dung chương trình, hệ thống học tập, cách
+              CodeGym Career đồng hành cùng học viên và thông tin cam kết việc làm.
+            </p>
+            <a
+              class="btn btn-material btn-lg"
+              href="https://codegym.vn/codegym-career/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Truy cập CodeGym Career <i class="fas fa-external-link-alt ml-2" aria-hidden="true"></i>
+            </a>
+            <small>Liên kết sẽ mở trang CodeGym Career trong tab mới.</small>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-7 mb-3 mb-md-0">
+            <a class="footer-brand" href="#home">
+              <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+              CodeGym <strong>Career</strong>
+            </a>
+            <p class="footer-description mb-0">
+              Trang landing page thực hành, sử dụng nội dung giới thiệu từ CodeGym Career.
+            </p>
+          </div>
+          <div class="col-md-5 text-md-right">
+            <a class="footer-link" href="#program">Chương trình</a>
+            <a class="footer-link" href="#tools">Hệ thống học tập</a>
+            <a class="footer-link" href="#home">Về đầu trang ↑</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 CodeGym Career · Bản mẫu học tập, không phải trang chính thức.</span>
+          <a href="https://codegym.vn/codegym-career/" target="_blank" rel="noreferrer">Trang nguồn <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
