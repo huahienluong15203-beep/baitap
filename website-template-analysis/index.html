@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="DevStart giới thiệu kiến thức lập trình, hướng dẫn học tập và tài nguyên dành cho người mới."
+    />
+    <title>DevStart — Bắt đầu với lập trình</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header" id="home">
+      <div class="utility-bar">
+        <div class="utility-inner">
+          <a class="utility-active" href="#home">DevStart</a>
+          <a href="#about">Cộng đồng</a>
+          <a href="#topics">Tài liệu</a>
+          <a href="#topics">Sự kiện</a>
+        </div>
+      </div>
+      <div class="brand-bar">
+        <a class="brand" href="#home" aria-label="DevStart - Trang chủ">
+          <span class="brand-symbol" aria-hidden="true">&lt;/&gt;</span>
+          <span>dev<span>start</span></span>
+        </a>
+        <div class="brand-actions">
+          <a class="support-link" href="#about">Ủng hộ dự án</a>
+          <form class="search-form" action="#topics" role="search">
+            <label class="visually-hidden" for="site-search">Tìm kiếm</label>
+            <input id="site-search" type="search" placeholder="Tìm kiếm..." />
+            <button type="submit" aria-label="Tìm kiếm">Tìm</button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <nav class="main-nav" aria-label="Điều hướng chính">
+      <div class="nav-inner">
+        <a href="#about">Giới thiệu</a>
+        <a href="#topics">Chủ đề</a>
+        <a href="#learning">Lộ trình học</a>
+        <a href="#footer">Liên hệ</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero" id="about">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Học · Thực hành · Sáng tạo</p>
+            <h1>Mọi hành trình lập trình đều bắt đầu từ một dòng code.</h1>
+            <p>
+              Khám phá những khái niệm nền tảng, làm theo hướng dẫn ngắn gọn và
+              tự tin tạo nên sản phẩm đầu tiên của bạn.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#topics">Khám phá chủ đề</a>
+              <a class="button button-outline" href="#learning">Xem lộ trình</a>
+            </div>
+            <p class="hero-note">Nội dung dễ tiếp cận cho người mới bắt đầu.</p>
+          </div>
+
+          <div class="code-card" aria-label="Ví dụ mã Python">
+            <div class="code-toolbar">
+              <div class="window-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <span>hello.py</span>
+            </div>
+            <pre><code><span class="code-muted"># Chương trình đầu tiên</span>
+<span class="code-keyword">def</span> <span class="code-function">greet</span>(name):
+    <span class="code-keyword">return</span> <span class="code-string">f"Xin chào, {name}!"</span>
+
+message = <span class="code-function">greet</span>(<span class="code-string">"bạn"</span>)
+<span class="code-function">print</span>(message)</code></pre>
+            <div class="code-result">
+              <span aria-hidden="true">▶</span>
+              <code>Xin chào, bạn!</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro section-container">
+        <div>
+          <p class="eyebrow eyebrow-dark">Chào mừng đến với DevStart</p>
+          <h2>Kiến thức rõ ràng. Bước tiến vững vàng.</h2>
+        </div>
+        <p>
+          Lập trình giúp bạn biến vấn đề thành giải pháp. Bắt đầu với những
+          nguyên tắc cơ bản, luyện tập từng bước và khám phá lĩnh vực phù hợp
+          với mình.
+        </p>
+      </section>
+
+      <section class="topics section-container" id="topics">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow eyebrow-dark">Khám phá</p>
+            <h2>Chọn chủ đề bạn quan tâm</h2>
+          </div>
+          <a class="all-link" href="#learning">Xem tất cả <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="topic-grid">
+          <article class="topic-card topic-blue">
+            <div class="topic-icon" aria-hidden="true">&lt;/&gt;</div>
+            <p class="topic-label">01 · Nền tảng web</p>
+            <h3>HTML &amp; CSS</h3>
+            <p>Tìm hiểu cách xây dựng cấu trúc và giao diện cho trang web.</p>
+            <a href="#learning">Khám phá bài học <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="topic-card topic-green">
+            <div class="topic-icon" aria-hidden="true">{ }</div>
+            <p class="topic-label">02 · Bắt đầu code</p>
+            <h3>Python căn bản</h3>
+            <p>Làm quen với biến, điều kiện, vòng lặp và hàm.</p>
+            <a href="#learning">Khám phá bài học <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="topic-card topic-orange">
+            <div class="topic-icon" aria-hidden="true">JS</div>
+            <p class="topic-label">03 · Tương tác web</p>
+            <h3>JavaScript</h3>
+            <p>Thêm hành vi tương tác và logic cho trang web của bạn.</p>
+            <a href="#learning">Khám phá bài học <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="learning" id="learning">
+        <div class="learning-inner">
+          <div>
+            <p class="eyebrow">Bắt đầu từ hôm nay</p>
+            <h2>Mỗi chuyên gia đều từng là người mới.</h2>
+            <p>
+              Chọn một bài học ngắn, thực hành theo ví dụ và tiếp tục tiến lên
+              theo nhịp độ của riêng bạn.
+            </p>
+          </div>
+          <a class="button button-light" href="#topics">Bắt đầu học <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <div class="footer-inner">
+        <div class="footer-about">
+          <a class="brand brand-footer" href="#home">
+            <span class="brand-symbol" aria-hidden="true">&lt;/&gt;</span>
+            <span>dev<span>start</span></span>
+          </a>
+          <p>Nơi bắt đầu hành trình sáng tạo cùng công nghệ.</p>
+          <p class="copyright">© 2026 DevStart. Bảo lưu mọi quyền.</p>
+        </div>
+        <div class="footer-links">
+          <h2>Khám phá</h2>
+          <ul>
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#topics">Chủ đề học tập</a></li>
+            <li><a href="#learning">Lộ trình</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h2>Thông tin</h2>
+          <ul>
+            <li><a href="#footer">Liên hệ</a></li>
+            <li><a href="#footer">Quyền riêng tư</a></li>
+            <li><a href="#footer">Điều khoản sử dụng</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Được thiết kế để hỗ trợ người học ở mọi cấp độ.</span>
+        <a href="#home">Về đầu trang ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
