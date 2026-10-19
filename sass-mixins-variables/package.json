@@ -1,0 +1,13 @@
+{
+  "name": "sass-mixins-variables-practice",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Thuc hanh toi uu CSS bang Sass variables va mixins",
+  "scripts": {
+    "build": "sass --no-source-map --style=expanded scss/main.scss css/main.css",
+    "watch": "sass --watch --no-source-map --style=expanded scss/main.scss:css/main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.105.2"
+  }
+}

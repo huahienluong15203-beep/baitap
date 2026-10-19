@@ -1,0 +1,9 @@
+@use "../abstracts/mixins" as mixins;
+
+.button {
+  @include mixins.button-style;
+}
+
+.button--secondary {
+  @include mixins.button-style(#334155);
+}

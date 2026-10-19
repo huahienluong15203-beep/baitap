@@ -1,0 +1,40 @@
+@use "variables" as vars;
+
+@mixin button-style($bg-color: vars.$primary-color) {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  padding: vars.$padding-standard;
+  border: 1px solid $bg-color;
+  border-radius: vars.$border-radius-button;
+  color: vars.$white;
+  background: $bg-color;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: vars.$primary-color-dark;
+    background: vars.$primary-color-dark;
+  }
+
+  &:focus-visible {
+    outline: 3px solid rgb(73 111 224 / 45%);
+    outline-offset: 3px;
+  }
+}
+
+@mixin box-style {
+  padding: vars.$padding-card;
+  border: 1px solid #e7e9ee;
+  border-radius: vars.$border-radius-card;
+  background: vars.$white;
+  box-shadow: vars.$box-shadow-default;
+}

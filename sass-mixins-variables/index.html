@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Minh họa cách dùng Sass variables và mixins để tái sử dụng style."
+    />
+    <title>Sass Studio — Variables &amp; Mixins</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Điều hướng chính">
+        <a class="brand" href="#">Sass<span>Studio</span></a>
+        <ul class="nav-links">
+          <li><a href="#components">Components</a></li>
+          <li><a href="#workflow">Quy trình</a></li>
+          <li><a href="#footer">Tài nguyên</a></li>
+        </ul>
+      </nav>
+      <section class="hero" id="workflow">
+        <div class="hero-copy">
+          <p class="eyebrow">Sass variables · Mixins · @use</p>
+          <h1>Viết ít lặp lại. Thay đổi giao diện dễ dàng.</h1>
+          <p>
+            Tập trung màu sắc và khoảng cách trong variables, rồi đóng gói
+            những style dùng chung thành mixins.
+          </p>
+          <a class="button" href="#components">Xem các components</a>
+        </div>
+        <div class="code-card">
+          <div class="code-title">scss/components/_buttons.scss</div>
+          <pre><code><span class="code-comment">// Dùng lại button style</span>
+.button {
+  @include mixins.button-style;
+}
+
+<span class="code-comment">// Chỉ truyền màu nền khác</span>
+.button--secondary {
+  @include mixins.button-style(#334155);
+}</code></pre>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="content" id="components">
+        <div class="section-heading">
+          <p class="eyebrow">Giao diện nhất quán</p>
+          <h2>Một bộ quy tắc, nhiều component tái sử dụng</h2>
+          <p>
+            Thay đổi biến màu hoặc bóng đổ ở một nơi sẽ cập nhật mọi component
+            đang dùng chúng.
+          </p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <span class="card-number">01</span>
+            <h3>Typography</h3>
+            <p>
+              Kích thước và màu chữ được quản lý tập trung trong
+              <code>_variables.scss</code>.
+            </p>
+            <a class="button" href="#footer">Tìm hiểu thêm</a>
+          </article>
+          <article class="card">
+            <span class="card-number">02</span>
+            <h3>Button style</h3>
+            <p>
+              Mixin nhận màu nền làm tham số và tái sử dụng cùng kiểu button ở
+              nhiều nơi.
+            </p>
+            <a class="button button--secondary" href="#footer">Xem ví dụ</a>
+          </article>
+          <article class="card">
+            <span class="card-number">03</span>
+            <h3>Card style</h3>
+            <p>
+              Padding, bo góc và box-shadow được định nghĩa một lần trong
+              <code>box-style</code>.
+            </p>
+            <a class="button" href="#footer">Khám phá</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="footer-inner">
+        <p>SassStudio — Bài thực hành variables và mixins</p>
+        <p>© 2026 SassStudio. Bảo lưu mọi quyền.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as vars;
+
+.card {
+  @include mixins.box-style;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  p {
+    margin-bottom: 1.25rem;
+    font-size: vars.$font-body;
+  }
+
+  .button {
+    align-self: flex-start;
+    margin-top: auto;
+  }
+}
